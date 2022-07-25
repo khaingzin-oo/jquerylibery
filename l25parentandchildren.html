@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parent and Children Method</title>
+	<style type="text/css">
+
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction:column;
+		}
+
+		.container{
+			width: 900px;
+			background: #f4f4f4;
+			padding: 20px;
+
+			display: flex;
+		}
+		.box{
+			width: 150px;
+			height: 300px;
+			margin:0 10px;
+		}
+		.square1{
+			background: green;
+		}
+		.square2{
+			background: orange;
+		}
+		.square3{
+			background: blue;
+		}
+		.square4{
+			background: violet;
+		}
+		.square5{
+			background: brown;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Parent & Children</h1>
+		<p>Thid is awesome jQuery version 3.6</p>
+	</div>
+
+	<div class="container">
+		<div class="box square1">Box1</div>
+		<hr/>
+		<div class="box square2">Box2</div>
+		<hr/>
+		<div class="box square3">Box3</div>
+		<hr/>
+		<div class="box square4">Box4</div>
+		<hr/>
+		<div class="box square5">Box5</div>
+	</div>
+
+	<dvi>
+		<p>Hay guy! what's your plan after class</p>
+	</dvi>
+
+	<script src="./libs/jQuery-3.6.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//parent()
+			// $(".box").click(function(){
+			// 	$(this).parent().css({
+			// 		"background":"darkblue",
+			// 		"box-shadow":"5px 5px 10px rgba(0,0,0,0.5)"
+			// 	});
+			// });
+
+			//children()
+			// $(".container").click(function(){
+			// 	$(this).children().css("background","red");
+			// });
+
+			// $(".container").click(function(){
+			// 	$(this).children(".square1").css("background","red");
+			// });
+
+			// $(".container").click(function(){
+			// 	$(this).children(".square3,.square4").css("background","red");
+			// });
+
+			//siblings()
+
+			// $(".square1").click(function(){
+			// 	$(this).siblings().css("background","red");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(this).siblings(".square3,.square5").css("background","red");
+			// });
+
+
+			
+
+
+			// :nth-child()//
+			//n,
+			//odd,
+			//even,
+			//formula
+
+			//nth-child count all child(eg. hr)
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(3)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(odd)").css("background","gray");
+			// });
+
+			//work hr
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(even)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(3n)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(2n+1)").css("background","gray");
+			// });
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(4n+1)").css("background","gray");
+			// });
+
+			// 6FM
+
+
+
+
+			//nth-of-type() //work same type(eg. only box)
+			//n
+			//odd
+			//even
+			//formula
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(2)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(4)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(odd)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(even)").css("background","gray");
+			// });
+
+
+			//formula
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(1n)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(2n)").css("background","gray");
+			// });
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(3n)").css("background","gray");
+			// });
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(4n)").css("background","gray");//4n stop 4
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(1n+1)").css("background","gray");
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(2n+1)").css("background","gray");//2n+1 start 
+			// });
+
+			// $(".square1").click(function(){
+			// 	$(".box:nth-of-type(3n+1)").css("background","gray");//3n+1 start 
+			// });
+
+
+
+
+			//next()
+			// $(".container").click(function(){
+			// 	$(this).next().css({
+			// 		"background-color":"red",
+			// 		"color":"#fff"
+			// 	});
+			// });
+
+			//prev()
+			$(".container").click(function(){
+				$(this).prev().css({
+					"background-color":"green",
+					"color":"#fff",
+					"padding":"20px"
+				});
+			});
+
+
+
+
+
+
+
+
+
+
+
+		});
+	</script>
+</body>
+</html>

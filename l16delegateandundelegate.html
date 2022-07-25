@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delegate and Undelegate Method</title>
+</head>
+<body>
+	<h1>hello myanmar</h1>
+	<h3>hello myanmar</h3>
+	<button type='button' id="delbtn">Delegate</button>
+	<button type='button' id="undelbtn">Undelegate</button>
+	<button type="button" id="hibtn">Say hi</button>
+	<button type="button" id="zoombtn">Zoom</button>
+	<script src="libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// $(selector).delegate(selector,event,funtion)
+
+			$("body").delegate("#delbtn","click",function(){
+				// $("h1").before("<p>Thanks for del</p>")
+				 $("h1").after("<p>Thanks for del</p>");
+
+				// $("h1").prepend("<p>Thanks for del</p>");
+				// $("h1").append("<p>Thanks for del</p>")
+
+			});
+			$("#undelbtn").click(function(){
+				$("body").undelegate("click");
+			});
+			$("#hibtn").click(function(){
+				console.log("hi");
+			});
+
+			var x=0;
+			$("#zoombtn").click(function(e){
+				$("h3").css({
+					fontSize:"+=10px"
+				});
+				$("#zoombtn").text("zoom"+(x+1));
+				x++;
+				if(x===3){
+					$("body").undelegate(e);
+				}
+			});
+		});
+	</script>
+</body>
+</html>
